@@ -7,13 +7,19 @@ It's inspired from [__erpeek__](https://github.com/florentx/erppeek) and we can 
 ###Features
 With __oeutils__ you are able to :
 
-. Create objects
-. Read objects
-. Update objects
-. Delete objects
-. Search objects
-. Search models
-. Get models fields
+* Create objects
+
+* Read objects
+
+* Update objects
+
+* Delete objects
+
+* Search objects
+
+* Search models
+
+* Get models fields
 
 
 ###How to
