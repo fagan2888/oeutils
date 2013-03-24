@@ -4,6 +4,7 @@
 ###############################################
 
 import xmlrpclib
+import inspect
 
 class Openerp(object):
     '''
@@ -42,7 +43,7 @@ class Openerp(object):
         return "Connected on %s with user %s " %(self.host,self.login)
 
     #########################################################
-    # SERVER
+    # CLIENT
     ########################################################
         
     def sock_common(self,):
@@ -62,11 +63,12 @@ class Openerp(object):
     def getUid(self,):
         return self.uid
 
-    def execute(self,):
-        pass
+    def execute(self, model, method, *args, **kwargs):
+        result = self.sock.execute(self.dbname, self.uid, self.pwd, model, method, args, kwargs)
+        return result
         
     ########################################################
-    # OPERATIONS       
+    # METHODS       
     ########################################################
 
     def search(self,model,attrs=[]):
